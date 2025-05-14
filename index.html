@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma de Desenvolvimento do App de Historinhas Bíblicas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #5c4b7d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #7a6b9c;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e6e0fa;
+            color: #5c4b7d;
+            font-weight: 600;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #f0ebfa;
+            transition: background-color 0.3s ease;
+        }
+        td:first-child {
+            font-weight: 600;
+            color: #6b5b95;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        td:first-child i {
+            color: #a8a3d6;
+            font-size: 1.2em;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #555;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        @media (max-width: 768px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th, td {
+                padding: 10px;
+            }
+            tr {
+                margin-bottom: 10px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cronograma de Desenvolvimento do App de Historinhas Bíblicas</h1>
+        <h2>Prazo: 30 Dias (15 de Maio de 2025 - 13 de Junho de 2025)</h2>
+        <table>
+            <tr>
+                <th>Fase</th>
+                <th>Tarefas</th>
+                <th>Duração</th>
+                <th>Datas</th>
+            </tr>
+            <tr>
+                <td><i class="fas fa-cogs"></i> Configuração do Projeto e Backend</td>
+                <td>
+                    <ul>
+                        <li>Inicializar projeto React Native (Expo)</li>
+                        <li>Configurar Firebase (Autenticação, Firestore, Storage, Functions)</li>
+                        <li>Configurar Firebase Cloud Messaging para notificações</li>
+                        <li>Integrar o layout ao projeto</li>
+                    </ul>
+                </td>
+                <td>4 dias</td>
+                <td>15 de Maio - 18 de Maio</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-book-open"></i> Gerenciamento de Histórias</td>
+                <td>
+                    <ul>
+                        <li>Criar interface do painel administrativo (hospedado no Firebase)</li>
+                        <li>Implementar formulário de criação de histórias (HTML, texto, imagens, embeds do YouTube)</li>
+                        <li>Configurar Firebase Storage para imagens e Firestore para metadados</li>
+                        <li>Testar upload e recuperação de histórias</li>
+                    </ul>
+                </td>
+                <td>6 dias</td>
+                <td>19 de Maio - 24 de Maio</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-credit-card"></i> Sistema de Assinatura</td>
+                <td>
+                    <ul>
+                        <li>Integrar compras no aplicativo com Expo (assinaturas mensal/anual)</li>
+                        <li>Criar interface de assinatura com oferta introdutória</li>
+                        <li>Implementar validação de recibos e renovação automática</li>
+                        <li>Gerenciar cancelamento de assinatura (restringir histórias pagas)</li>
+                        <li>Testar fluxo de assinatura</li>
+                    </ul>
+                </td>
+                <td>6 dias</td>
+                <td>25 de Maio - 30 de Maio</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-bell"></i> Sistema de Mensagens</td>
+                <td>
+                    <ul>
+                        <li>Configurar mensagens manuais via Console do Firebase</li>
+                        <li>Implementar gatilhos de mensagens automáticas (5 dias inativo, novas histórias, 20 dias inativo)</li>
+                        <li>Usar Firebase Functions para programar e enviar notificações</li>
+                        <li>Testar entrega de notificações</li>
+                    </ul>
+                </td>
+                <td>5 dias</td>
+                <td>31 de Maio - 4 de Junho</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-mobile-alt"></i> Frontend e Exibição</td>
+                <td>
+                    <ul>
+                        <li>Construir interface de exibição de histórias (gratuitas vs. pagas)</li>
+                        <li>Renderizar HTML, texto, imagens e embeds de vídeo</li>
+                        <li>Implementar navegação e paginação de histórias</li>
+                        <li>Garantir controle de acesso baseado em assinatura</li>
+                    </ul>
+                </td>
+                <td>5 dias</td>
+                <td>5 de Junho - 9 de Junho</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-bug"></i> Testes e Depuração</td>
+                <td>
+                    <ul>
+                        <li>Testar aplicativo em iOS e Android (Expo Go)</li>
+                        <li>Validar assinaturas, mensagens e renderização de histórias</li>
+                        <li>Corrigir bugs e otimizar desempenho</li>
+                    </ul>
+                </td>
+                <td>3 dias</td>
+                <td>10 de Junho - 12 de Junho</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-rocket"></i> Lançamento</td>
+                <td>
+                    <ul>
+                        <li>Compilar e enviar app para App Store e Google Play</li>
+                        <li>Publicar painel administrativo no Firebase</li>
+                        <li>Verificações finais e lançamento</li>
+                    </ul>
+                </td>
+                <td>1 dia</td>
+                <td>13 de Junho</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
